@@ -4,12 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "es6-promise": "^4.2.4",
     "isomorphic-unfetch": "^2.0.0",
     "next": "^6.0.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-inner-html": "^1.0.1",
     "xml2js": "^0.4.19"
   },
   "scripts": {
