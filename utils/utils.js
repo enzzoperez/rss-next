@@ -1,10 +1,9 @@
 const parseString = require('xml2js').parseString;
 
 /** 
-* Muestra un mensaje de texto
-* @param {String} texto nombre del metodo
-* @param {String} texto mensaje a mostrar
-* @returns {string} el codigo de retorno 0
+* Extrae el src de imagen textoque se le pasa
+* @param {String} tex Texto(con xml format) que hay que pasarle
+* @returns {string} link de la imagen
 */
 export const extractImage = (text)=>{
     let imgSrc
@@ -19,6 +18,11 @@ export const extractImage = (text)=>{
     return imgSrc
 }
 
+/**
+ * Funcion para extraer la pequeña descripcion de la noticia
+ * @param {String} text TExto de donde se extrae la descripcion
+ * @returns {String} Descripcion, y si no hay devuelve un mensaje
+ */
 export const extractDescription = (text) => {
     let shortDescription = null
     parseString(text, (err, result) => {
