@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import fetch from 'isomorphic-unfetch'
 import Layout from "../components/layout";
 import ListNews from "../components/listNews";
 
 export default class Index extends Component {
-    
 
     render() {
         const {news} = this.props                
