@@ -14,7 +14,9 @@ export default class ListNews extends Component {
                 return (
                     <div className="listNews" key={index}>
                         <div className="itemNews">
+                            <img src={thumbnail}/>
                             <h2><a href={ link }>{ title }</a></h2>
+                            <div dangerouslySetInnerHTML={{__html: `${shortDescription}`}}/>
                             <div className="detailsNews">
                                 <strong>{ dateNow } - {time}</strong>
                             </div>
