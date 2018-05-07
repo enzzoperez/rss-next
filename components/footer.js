@@ -3,9 +3,11 @@ import React, { Component } from 'react';
 export default class Footer extends Component {
   render() {
     return (
-      <div>
-        Footer
-      </div>
+      <footer class="footer">
+        <div class="container bg-black">
+          <span class="text-muted">Place sticky footer content here.</span>
+        </div>
+      </footer>
     )
   }
 };

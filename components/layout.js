@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Head from 'next/head'
 import Link from 'next/link'
+import Example from "./navbar";
 import Footer from "./footer";
 import Header from "./header";
 import { Container } from 'reactstrap'
@@ -27,9 +28,7 @@ export default class Layout extends Component {
           <meta name="mobile-web-app-capable" content="yes" />
         </Head>
 
-      <nav>
-        <Link href="/"><a>{ showBack && <span className="back">&lt;</span> }<span className="title">Valley News</span></a></Link>
-      </nav>
+      
 
       <div>
         <Header/>

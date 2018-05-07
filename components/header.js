@@ -13,8 +13,19 @@ const sections = [
 
 export default class Header extends Component {
   render() {
+		const {showBack} = this.props
     return (
 		<div>
+			<nav>
+        <Link href="/">
+					<a>{ showBack && <span className="back">&lt;</span> }
+						<span className="title">
+							Next News
+						</span>
+					</a>
+				</Link>
+      </nav>
+			
 			<ul>
 				{sections.map((item, index)=> {
 					return(
