@@ -1,0 +1,14 @@
+{
+  "name": "Next News",
+  "short_name": "Next News",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafafa",
+  "theme_color": "#ff6600",
+  "description": "Una PWA simple de noticias catamarqueñas.",
+  "icons": [{
+    "src": "/static/icon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}
