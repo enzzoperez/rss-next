@@ -9,12 +9,12 @@ import { Container } from 'reactstrap'
 
 export default class Layout extends Component {
   render() {
-    const {title, description, showBack, children} = this.props
+    const {title, description, children} = this.props
     return (
       <div>
         <Head>
-          <title>{ title }</title>
-          <meta name="description" content={ description } />
+          <title>{ title? title: '' }</title>
+          <meta name="description" content={ description? description: ''} />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
           <link rel="manifest" href="/static/manifest.webmanifest" />
