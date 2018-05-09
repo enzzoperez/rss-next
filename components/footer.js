@@ -21,13 +21,10 @@ export default class Footer extends Component {
                   <FaTwitter/>
                 </a>
                 <a class="gplus-ic">
-                    <FaGoogle/>
                 </a>
                 <a class="li-ic">
-                    <FaLinkedin/>
                 </a>
                 <a className="ins-ic">
-                    <FaInstagram/>
                 </a>
               </div>
             </Col>
