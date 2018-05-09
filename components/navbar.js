@@ -1,62 +1,44 @@
 import React from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
 export default class Example extends React.Component {
   constructor(props) {
     super(props);
 
-    this.toggle = this.toggle.bind(this);
+    this.toggleNavbar = this.toggleNavbar.bind(this);
     this.state = {
-      isOpen: false
+      collapsed: true
     };
   }
-  toggle() {
+
+  toggleNavbar() {
     this.setState({
-      isOpen: !this.state.isOpen
+      collapsed: !this.state.collapsed
     });
   }
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
+        <Navbar color="warning" light>
+          <NavbarBrand href="/index" className="mr-auto">Next News</NavbarBrand>
+          <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+          <Collapse isOpen={!this.state.collapsed} navbar>
+            <Nav navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <NavLink href="/components/">Ultimas Noticias</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                <NavLink href="/listPapers">Listas de Diarios</NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+              <NavItem>
+                <NavLink href="/aboutPage">Categorías</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/aboutPage">Clima</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/aboutPage">Sobre Nosotros</NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>

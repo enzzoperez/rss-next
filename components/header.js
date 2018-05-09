@@ -18,26 +18,11 @@ export default class Header extends Component {
 		<div>
 			<nav>
         <Link href="/">
-					<a>{ showBack && <span className="back">&lt;</span> }
-						<span className="title">
-							Next News
-						</span>
-					</a>
+					<a>{ showBack && <span className="back">&lt;</span> }</a>
 				</Link>
       </nav>
-			
-			<ul>
-				{sections.map((item, index)=> {
-					return(
-						<li key={index}>
-							<Link href={item.url}>
-								<a>{item.section}</a>
-							</Link>
-						</li>
-					)
-				})}
-			</ul>
 		</div>
+		
     )
   }
 };
