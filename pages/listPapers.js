@@ -3,20 +3,27 @@ import Link from "next/link";
 import Layout from "../components/layout";
 
 const papers = [
-	{nombre: 'El esquiu', url:'/ancasti'},
-	{nombre: 'El ancasti', url:'/ancasti'},
-	{nombre: 'Catamarca Actual', url:'/ancasti'},
-	{nombre: 'Clarin', url:'/ancasti'}
+	{name: 'El esquiu', url:'/journal'},
+	{name: 'El ancasti', url:'/journal'},
+	{name: 'Catamarca Actual', url:'/journal'},
+	{name: 'Clarin', url:'/journal'}
 ]
+
+const JournalComponent = (props) => {
+	const {name, url} = props
+	return (
+		<Link href={`${url}/?name=${name}`}>
+			<a>{name}</a>
+		</Link>
+	)
+};
 
 export default class ListPapers extends Component {
 	render() {
 		return (
 			<Layout>
 				{papers.map((item, index)=>(
-					<Link href={item.url}>
-						<a key={index}>{item.nombre}</a>
-					</Link>
+					<JournalComponent key={index} name={item.name} url={item.url}/>
 				))}
 			</Layout>
 		)
