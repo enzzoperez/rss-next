@@ -10,9 +10,9 @@ const Categories = (props) => {
     const {daily} = props
     const listCategories = chooseCategories(daily)
     return (
-        listCategories.map(cat=>{
+        listCategories.map((cat, index)=>{
             return(
-                <ListGroup>
+                <ListGroup key={index}>
                     <ListGroupItem>
                         <Link 
                             href={`/category?name=${cat.link}`}
