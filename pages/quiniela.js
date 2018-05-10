@@ -36,8 +36,7 @@ class Iframe extends Component {
         width={'100%'}
         height={'100%'}
         style={iframeStyle}
-        src='http://www.numerosconsuerte.com.ar/sorteos/catamarca' 
-        onLoad={submitForm()}
+        src='http://www.numerosconsuerte.com.ar/sorteos/catamarca'
       />
     )
   }

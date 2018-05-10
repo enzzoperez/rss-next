@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 
 const papers = [
 	{name: 'El esquiu', url:'/journal'},
-	{name: 'El ancasti', url:'/journal'},
+	{name: 'El Ancasti', url:'/journal'},
 	{name: 'Catamarca Actual', url:'/journal'},
 	{name: 'Clarin', url:'/journal'}
 ]
