@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { ListGroup, ListGroupItem } from 'reactstrap';
+
 import Link from "next/link";
 import Layout from "../components/layout";
 import { chooseCategories } from "../utils/utils";
@@ -10,13 +12,27 @@ const Categories = (props) => {
     return (
         listCategories.map(cat=>{
             return(
-                <Link 
-                    href={`/category?name=${cat.link}`}
-                    as={'/category'}>
-                    <a>categoria: {cat.name}</a>
-                </Link>
+                <ListGroup>
+                    <ListGroupItem>
+                        <Link 
+                            href={`/category?name=${cat.link}`}
+                            as={'/category'}>
+                            <a>{cat.name}</a>
+                        </Link>
+                    </ListGroupItem>
+                    
+                    <style jsx global>{`
+                        a { 
+                        color: black;
+                        font-family: Nilland;
+                        font-size: 1.5rem;
+                        }
+                    `}</style>
+                </ListGroup>
+
             )
         })
+        
     )
 }
 
