@@ -28,16 +28,26 @@ export default class NewsComponent extends Component {
                                 </CardTitle>
                                 <div dangerouslySetInnerHTML={{__html: `<CardText>${shortDescription}</CardText>`}}/>
                                 <CardText>
+<<<<<<< Updated upstream
                                     <small className="text-muted">
                                         <div className="detailsNews">
                                             { dateNow } - {time}
                                         </div>
                                     </small>
+=======
+                                    <small className="text-muted"><div className="detailsNews">
+                                    { dateNow } - {time}
+                                </div></small>
+>>>>>>> Stashed changes
                                 </CardText>
                             </CardBody>
                         </Card>
 
+<<<<<<< Updated upstream
                        <style jsx>{`
+=======
+                        <style jsx>{`
+>>>>>>> Stashed changes
                             h2 {
                                 font-size: 1.1em;
                                 font-family: 'Roboto';

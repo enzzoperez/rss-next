@@ -19,7 +19,11 @@ export default class Example extends React.Component {
   render() {
     return (
       <div>
+<<<<<<< Updated upstream
         <Navbar md="3" light>
+=======
+        <Navbar className="mb-3" light>
+>>>>>>> Stashed changes
           <Row>
             <Col sm="10">
               <NavbarBrand href="/index" className="mr-auto">
