@@ -19,7 +19,7 @@ export default class Example extends React.Component {
   render() {
     return (
       <div>
-        <Navbar className="mb-3" light>
+        <Navbar md="3" light>
           <Row>
             <Col sm="10">
               <NavbarBrand href="/index" className="mr-auto">
@@ -33,16 +33,16 @@ export default class Example extends React.Component {
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
               <NavItem>
-                <NavLink href="/">Ultimas Noticias</NavLink>
+                <NavLink href="/index">Ultimas Noticias</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/listPapers">Listas de Diarios</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/aboutPage">Categorías</NavLink>
+                <NavLink href="/category">Categorías</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/aboutPage">Clima</NavLink>
+                <NavLink href="">Clima</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/aboutPage">Sobre Nosotros</NavLink>
