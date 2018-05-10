@@ -19,12 +19,11 @@ export default class NewsComponent extends Component {
                             <CardImg width="10%" src={urlToImage}/>
                             <CardBody>
                                 <Badge className="mb-3" color="primary">La Nación</Badge>
-                                <CardTitle><h2><a href={ url }>{ title }</a></h2></CardTitle>
-                                <CardText><div dangerouslySetInnerHTML={{__html: `${shortDescription}`}}/></CardText>
+                                <CardTitle><a href={ url }>{ title }</a></CardTitle>
+                                <div dangerouslySetInnerHTML={{__html: `<CardText>${shortDescription}</CardText>`}}/>
                                 <CardText>
-                                    <small className="text-muted"><div className="detailsNews">
-                                    <strong>{ dateNow } - {time}</strong>
-                                </div></small>
+                                    <small className="text-muted">
+                                        <strong>{ dateNow } - {time}</strong></small>
                                 </CardText>
                             </CardBody>
                         </Card>
