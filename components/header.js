@@ -17,10 +17,18 @@ export default class Header extends Component {
     return (
 		<div>
 			<nav>
-        <Link href="/">
+        <Link className="menu" href="/">
 					<a>{ showBack && <span className="back">&lt;</span> }</a>
 				</Link>
       </nav>
+
+			<style jsx>{`
+				nav {
+						color: #333;
+						font-family: 'Roboto Slab';
+						font-size: 2rem;
+				}
+		`}</style>
 		</div>
 		
     )

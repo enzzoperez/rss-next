@@ -12,29 +12,25 @@ export default class Footer extends Component {
       <footer className="page-footer font-small indigo pt-0">
         <Container>
           <Row>
-            <Col md="5" className="mb-5">
+            <Col sm={{ size: 'auto', offset: 3 }} md={{ size: 'auto', offset: 3 }} className="mb-1 mt-5 text-white">
               <div className="mb-5 flex-center">
-                <a className="fb-ic" href="www.facebook.com/nextinnovationlab">
-                  <FaFacebook/>
-                </a>
-                <a class="tw-ic">
-                  <FaTwitter/>
-                </a>
-                <a class="gplus-ic">
-                </a>
-                <a class="li-ic">
-                </a>
-                <a className="ins-ic">
-                </a>
+                <h3 class="text-white" href="https://www.facebook.com/nextinnovationlab/"> 
+                  Next Innovation Lab <img src="/static/logo-next.png" width="5%"/></h3>
+                  
               </div>
             </Col>
           </Row>
 
-          <div class="footer-copyright py-3 text-center">
-              © 2018 Copyright:
-              <a href=""> Next Innovation Lab </a>
+          <div class="footer-copyright pb-3 text-center text-white">
+              © 2018 Copyright
           </div>
         </Container>
+        <style jsx>{`
+          .indigo { 
+            background: #30302f;
+            font-family: Roboto;
+          }
+        `}</style>
     </footer>
                       
     )

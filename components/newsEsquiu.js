@@ -18,50 +18,52 @@ export default class NewsEsquiu extends Component {
                         <Card className="itemNews mb-3" href={link}>
                             <CardImg width="10%" src={thumbnail}/>
                             <CardBody>
-                                <Badge className="mb-3" color="warning">El Esquiu</Badge>
-                                <CardTitle><h2><a href={ link }>{ title }</a></h2></CardTitle>
+                                <Badge className="mb-3" color="warning">
+                                    El Esquiu
+                                </Badge>
+                                <CardTitle>
+                                    <h2>
+                                        <a href={ link }>{ title }</a>
+                                    </h2>
+                                </CardTitle>
                                 <CardText><div dangerouslySetInnerHTML={{__html: `${shortDescription}`}}/></CardText>
                                 <CardText>
-                                    <small className="text-muted"><div className="detailsNews">
-                                    <strong>{ dateNow } - {time}</strong>
-                                </div></small>
+                                    <small className="text-muted">
+                                        <div className="detailsNews">
+                                            { dateNow } - {time}
+                                        </div>
+                                    </small>
                                 </CardText>
                             </CardBody>
                         </Card>
                             
 
                         <style jsx>{`
-                            .newsEsquiu {
-                            padding: 0 1em;
-                            }
-                            .itemNews {
-                            padding: 1em 0;
-                            border-bottom: 1px solid rgba(0,0,0,0.1);
-                            }
                             h2 {
-                            font-size: 1.1em;
-                            font-family: 'Roboto';
-                            font-weight: 400;
-                            margin: 0;
-                            margin-bottom: 0.5em;
+                                font-size: 1.1em;
+                                font-family: 'Roboto';
+                                font-weight: 400;
+                                margin: 0;
+                                margin-bottom: 0.5em;
                             }
                             h2 a {
-                            color: #333;
-                            text-decoration: none;
+                                color: #333;
+                                font-family: 'Roboto';
+                                font-size: 2rem;
                             }
                             h2 a:hover {
-                            text-decoration: underline;
+                                text-decoration: underline;
                             }
                             .detailsNews {
-                            font-size: 0.9em;
-                            font-weight: bold;
+                                font-size: 0.9em;
+                                font-weight: bold;
                             }
                             .detailsNews strong {
-                            margin-right: 1em;
+                                margin-right: 1em;
                             }
                             .detailsNews a {
-                            color: #ff6600;
-                            text-decoration: none;
+                                color: #ff6600;
+                                text-decoration: none;
                             }
                         `}</style>
                     </div>

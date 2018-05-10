@@ -28,8 +28,6 @@ export default class Layout extends Component {
           <meta name="mobile-web-app-capable" content="yes" />
         </Head>
 
-      
-
       <div>
         <Example/>
         <Header/>
@@ -37,38 +35,10 @@ export default class Layout extends Component {
         <Footer/>
       </div>
 
-      <style jsx>{`
-        nav {
-          background: #cc7c28;
-          color: #fff;
-          font-weight: bold;
-        }
-        nav a {
-          display: inline-block;
-          color: #fff;
-          text-decoration: none;
-        }
-        nav a:hover {
-          background-color: rgba(0,0,0,0.1);
-        }
-        nav .back {
-          display: inline-block;
-          height: 1em;
-          width: 1em;
-          font-weight: 300;
-          padding: 1em 0 1em 1em;
-          text-align: center;
-        }
-        nav .title {
-          display: inline-block;
-          padding: 1em;
-        }
-      `}</style>
-
       <style jsx global>{`
         body { 
           margin: 0;
-          background: #f0f0f0;
+          background: #fafafa;
           font-family: Nilland;
         }
       `}</style>
@@ -76,8 +46,3 @@ export default class Layout extends Component {
     )
   }
 };
-/*
-Layout.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-}*/
