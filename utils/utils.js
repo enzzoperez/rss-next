@@ -43,30 +43,51 @@ export const extractDescription = text => {
  * @returns {Array} Listado de categorias del diario
  */
 const categoriesEsquiu = [
-    {name:'Política', link: 'r=10'}, 
+    {name:'Política', link: 'http://www.elesquiu.com/rss/feed.html?r=10'}, 
     {name:'Sociedad', link:'http://www.elesquiu.com/rss/feed.html?r=11'},
-    {name:'Policiales', link:'r=12'}, 
-    {name:'Nacionales', link:'r=502'},
-    {name:'Cultura',link:'r=14'}, 
-    {name:'Deportes',link:'r=15'},
-    {name:'Entrevistas',link:'r=16'}, 
-    {name:'Editorial',link:'r=17'},
-    {name:'Correo y Opinión',link:'r=18'}, 
-    {name:'Tecnología',link:'r=20'},
-    {name:'Internacionales',link:'r=504'}, 
-    {name:'Educación',link:'r=13'},
+    {name:'Policiales', link:'http://www.elesquiu.com/rss/feed.html?r=12'}, 
+    {name:'Nacionales', link:'http://www.elesquiu.com/rss/feed.html?r=502'},
+    {name:'Cultura',link:'http://www.elesquiu.com/rss/feed.html?r=14'}, 
+    {name:'Deportes',link:'http://www.elesquiu.com/rss/feed.html?r=15'},
+    {name:'Entrevistas',link:'http://www.elesquiu.com/rss/feed.html?r=16'}, 
+    {name:'Editorial',link:'http://www.elesquiu.com/rss/feed.html?r=17'},
+    {name:'Correo y Opinión',link:'http://www.elesquiu.com/rss/feed.html?r=18'}, 
+    {name:'Tecnología',link:'http://www.elesquiu.com/rss/feed.html?r=20'},
+    {name:'Internacionales',link:'http://www.elesquiu.com/rss/feed.html?r=504'}, 
+    {name:'Educación',link:'http://www.elesquiu.com/rss/feed.html?r=13'},
+]
+
+const categoriesCatamarcaActual = [
+    {name:'Política', link: 'http://www.catamarcactual.com.ar/rss/feed.html?r=1'}, 
+    {name:'Policiales', link:'http://www.catamarcactual.com.ar/rss/feed.html?r=4'}, 
+    {name:'Nacionales', link:'http://www.catamarcactual.com.ar/rss/feed.html?r=6'},
+    {name:'Economia',link:'http://www.catamarcactual.com.ar/rss/feed.html?r=2'}, 
+    {name:'Informacion General',link:'http://www.catamarcactual.com.ar/rss/feed.html?r=3'},
+    {name:'Deportes',link:'http://www.catamarcactual.com.ar/rss/feed.html?r=5'}, 
+    {name:'Educación',link:'http://www.catamarcactual.com.ar/rss/feed.html?r=7'},
 ]
 
 const categoriesClarin = [
-    {name: 'Política',link: 'politica/'},
-    {name: 'Policiales',link: 'policiales/'},
-    {name: 'Cultura',link: 'cultura/'},
-    {name: 'Economia',link: 'economia/'},
-    {name: 'Fútbol',link: 'deportes/futbol/'},
-    {name: 'Espectaculos', link:'espectaculos/'},
+    {name: 'Política',link: 'https://www.clarin.com/rss/politica/'},
+    {name: 'Policiales',link: 'https://www.clarin.com/rss/policiales/'},
+    {name: 'Cultura',link: 'https://www.clarin.com/rss/cultura/'},
+    {name: 'Economia',link: 'https://www.clarin.com/rss/economia/'},
+    {name: 'Fútbol',link: 'https://www.clarin.com/rss/deportes/futbol/'},
+    {name: 'Espectaculos', link:'https://www.clarin.com/rss/espectaculos/'},
+]
+
+const categoriesNacion = [
+    {name: 'Política',link: 'http://contenidos.lanacion.com.ar/herramientas/rss/categoria_id=30'},
+    {name: 'Tecnología',link: 'http://contenidos.lanacion.com.ar/herramientas/rss/categoria_id=432'},
+    {name: 'Cultura',link: 'http://contenidos.lanacion.com.ar/herramientas/rss/categoria_id=6734'},
+    {name: 'Economia',link: 'http://contenidos.lanacion.com.ar/herramientas/rss/categoria_id=272'},
+    {name: 'Deportes',link: 'http://contenidos.lanacion.com.ar/herramientas/rss/categoria_id=131'},
+    {name: 'Espectaculos', link:'http://contenidos.lanacion.com.ar/herramientas/rss/categoria_id=120'},
 ]
 
 export const chooseCategories = text => {
     if (text === 'El esquiu') return categoriesEsquiu
+    if (text === 'Catamarca Actual') return categoriesCatamarcaActual
     if (text === 'Clarin') return categoriesClarin
+    if (text === 'La Nación') return categoriesNacion
 }
