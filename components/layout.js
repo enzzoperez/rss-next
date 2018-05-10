@@ -20,9 +20,9 @@ export default class Layout extends Component {
           <link rel="manifest" href="/static/manifest.webmanifest" />
 
           <meta name="theme-color" content="#cc7c28" />
-          <link rel="shortcut icon" href="/static/icon.png" />
-          <link rel="apple-touch-icon" href="/static/icon.png" />
-          <meta name="apple-mobile-web-app-title" content="Next Noticias" />
+          <link rel="shortcut icon" href="/static/logo-next.png" />
+          <link rel="apple-touch-icon" href="static/logo-next.png" />
+          <meta name="apple-mobile-web-app-title" content="Next News" />
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="mobile-web-app-capable" content="yes" />
