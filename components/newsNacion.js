@@ -22,11 +22,41 @@ export default class NewsComponent extends Component {
                                 <CardTitle><a href={ url }>{ title }</a></CardTitle>
                                 <div dangerouslySetInnerHTML={{__html: `<CardText>${shortDescription}</CardText>`}}/>
                                 <CardText>
-                                    <small className="text-muted">
-                                        <strong>{ dateNow } - {time}</strong></small>
+                                    <small className="text-muted"><div className="detailsNews">
+                                        { dateNow } - {time}
+                                    </div></small>
                                 </CardText>
                             </CardBody>
                         </Card>
+
+                        <style jsx>{`
+                            h2 {
+                                font-size: 1.1em;
+                                font-family: 'Roboto';
+                                font-weight: 400;
+                                margin: 0;
+                                margin-bottom: 0.5em;
+                            }
+                            h2 a {
+                                color: #333;
+                                font-family: 'Roboto';
+                                font-size: 2rem;
+                            }
+                            h2 a:hover {
+                                text-decoration: underline;
+                            }
+                            .detailsNews {
+                                font-size: 0.9em;
+                                font-weight: bold;
+                            }
+                            .detailsNews strong {
+                                margin-right: 1em;
+                            }
+                            .detailsNews a {
+                                color: #ff6600;
+                                text-decoration: none;
+                            }
+                        `}</style>
                     </div>
                 )}
             )
