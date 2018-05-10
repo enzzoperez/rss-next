@@ -6,7 +6,6 @@ import { ListPapers } from "../pages/listPapers";
 const sections = [
 	{section: 'Ultimas noticias', url:'/'},
 	{section: 'Lista de diarios', url:'/listPapers'},
-	{section: 'Categorias', url:'/aboutPage'},
 	{section: 'Clima', url:'/aboutPage'},
 	{section: 'Next Innovation Lab', url:'/aboutPage'}
 ]

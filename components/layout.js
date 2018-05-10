@@ -30,7 +30,6 @@ export default class Layout extends Component {
 
       <div>
         <Example/>
-        <Header/>
             {children}
         <Footer/>
       </div>

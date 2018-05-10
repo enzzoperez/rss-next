@@ -43,9 +43,6 @@ export default class Example extends React.Component {
                 <NavLink href="/listPapers">Listas de Diarios</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/category">Categorías</NavLink>
-              </NavItem>
-              <NavItem>
                 <NavLink href="/quiniela">Quiniela</NavLink>
               </NavItem>
               <NavItem>
