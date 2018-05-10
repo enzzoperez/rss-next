@@ -18,18 +18,26 @@ export default class NewsComponent extends Component {
                         <Card className="itemNews mb-3" href={url}>
                             <CardImg width="10%" src={urlToImage}/>
                             <CardBody>
-                                <Badge className="mb-3" color="primary">La Nación</Badge>
-                                <CardTitle><a href={ url }>{ title }</a></CardTitle>
+                                <Badge className="mb-3" color="primary">
+                                    La Nación
+                                </Badge>
+                                <CardTitle>
+                                    <h2>
+                                        <a href={ url }>{ title }</a>
+                                    </h2>
+                                </CardTitle>
                                 <div dangerouslySetInnerHTML={{__html: `<CardText>${shortDescription}</CardText>`}}/>
                                 <CardText>
-                                    <small className="text-muted"><div className="detailsNews">
-                                        { dateNow } - {time}
-                                    </div></small>
+                                    <small className="text-muted">
+                                        <div className="detailsNews">
+                                            { dateNow } - {time}
+                                        </div>
+                                    </small>
                                 </CardText>
                             </CardBody>
                         </Card>
 
-                        <style jsx>{`
+                       <style jsx>{`
                             h2 {
                                 font-size: 1.1em;
                                 font-family: 'Roboto';
