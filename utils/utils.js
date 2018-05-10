@@ -76,18 +76,22 @@ const categoriesClarin = [
     {name: 'Espectaculos', link:'https://www.clarin.com/rss/espectaculos/'},
 ]
 
-const categoriesNacion = [
-    {name: 'Política',link: 'http://contenidos.lanacion.com.ar/herramientas/rss/categoria_id=30'},
-    {name: 'Tecnología',link: 'http://contenidos.lanacion.com.ar/herramientas/rss/categoria_id=432'},
-    {name: 'Cultura',link: 'http://contenidos.lanacion.com.ar/herramientas/rss/categoria_id=6734'},
-    {name: 'Economia',link: 'http://contenidos.lanacion.com.ar/herramientas/rss/categoria_id=272'},
-    {name: 'Deportes',link: 'http://contenidos.lanacion.com.ar/herramientas/rss/categoria_id=131'},
-    {name: 'Espectaculos', link:'http://contenidos.lanacion.com.ar/herramientas/rss/categoria_id=120'},
+const categoriesAncasti = [
+    {name: 'Política y Economía',link: 'http://www.elancasti.com.ar/rss/feed.html?r=1'},
+    {name: 'Policiales',link: 'http://www.elancasti.com.ar/rss/feed.html?r=6'},
+    {name: 'Información General',link: 'http://www.elancasti.com.ar/rss/feed.html?r=9'},
+    {name: 'Deportes',link: 'http://www.elancasti.com.ar/rss/feed.html?r=5'},
+    {name: 'Educación',link: 'http://www.elancasti.com.ar/rss/feed.html?r=8'},
+    {name: 'País', link:'http://www.elancasti.com.ar/rss/feed.html?r=2'},
+    {name: 'Mundo', link:'http://www.elancasti.com.ar/rss/feed.html?r=3'},
+    {name: 'Cultura', link:'http://www.elancasti.com.ar/rss/feed.html?r=51'},
+    {name: 'Espectáculo', link:'http://www.elancasti.com.ar/rss/feed.html?r=4 '},
 ]
 
 export const chooseCategories = text => {
-    if (text === 'El esquiu') return categoriesEsquiu
-    if (text === 'Catamarca Actual') return categoriesCatamarcaActual
-    if (text === 'Clarin') return categoriesClarin
-    if (text === 'La Nación') return categoriesNacion
+    let value = text.toUpperCase()
+    if (value === 'EL ESQUIU') return categoriesEsquiu
+    if (value === 'CATAMARCA ACTUAL') return categoriesCatamarcaActual
+    if (value === 'CLARIN') return categoriesClarin
+    if (value === 'EL ANCASTI') return categoriesAncasti
 }
