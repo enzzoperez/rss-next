@@ -50,39 +50,7 @@ export default class Example extends React.Component {
             </Nav>
           </Collapse>
         </Navbar>
-
-        {/* <Navbar md="3" light>
-          <Row>
-            <Col sm="10">
-              <NavbarBrand href="/index" className="mr-auto">
-                <img src="/static/logo-next2.png" width="30%"/>
-              </NavbarBrand>
-            </Col>
-            <Col md="1">
-              <NavbarToggler onClick={this.toggleNavbar} className="mr-4" />
-            </Col>
-          </Row>
-          <Collapse isOpen={!this.state.collapsed} navbar>
-            <Nav navbar>
-              <NavItem>
-                <NavLink href="/index">Ultimas Noticias</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/listPapers">Listas de Diarios</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/quiniela">Quiniela</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="">Clima</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/aboutPage">Sobre Nosotros</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar> */}
-
+        
         <style jsx global>{`
           body { 
             background: #000;

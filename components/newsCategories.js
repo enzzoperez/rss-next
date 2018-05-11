@@ -23,7 +23,12 @@ export default class NewsCategories extends Component {
                             <CardBody>
                                 <CardTitle>
                                     <h2>
-                                        <a href={ link }>{ title }</a>
+                                        <a 
+                                            target='_blank' 
+                                            rel='nofollow noreferrer noopener' 
+                                            href={ link }>
+                                                { title }
+                                        </a>
                                     </h2>
                                 </CardTitle>
                                 <CardText><div dangerouslySetInnerHTML={{__html: `${shortDescription}`}}/></CardText>
