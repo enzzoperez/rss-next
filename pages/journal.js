@@ -16,7 +16,7 @@ const Categories = (props) => {
                     <ListGroupItem>
                         <Link 
                             href={`/category?name=${cat.link}`}
-                            as={'/category'}>
+                            as={`/category/${cat.name}`}>
                             <a>{cat.name}</a>
                         </Link>
                     </ListGroupItem>

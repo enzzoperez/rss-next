@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import fetch from 'isomorphic-unfetch'
+import withRedux from "next-redux-wrapper";
 
 import Layout from "../components/layout";
 import NewsEsquiu from "../components/newsEsquiu";
@@ -10,10 +11,23 @@ import NewsNacion from "../components/newsNacion";
 
 
 export default class Index extends Component {
+    state = {
+        loading: true
+    }
+
+    componentDidMount(){
+        let {loading} = this.props
+        this.setState({loading: loading})
+    }
 
     render() {
         const {newsEsquiu, newsClarin, newsCatActual, newsNacion} = this.props
-                     
+        if (this.state.loading) {
+            return (
+            <Layout>
+                <p>Cargando Noticias...</p>
+            </Layout>)
+        }             
         return (
             <Layout>
                 <NewsEsquiu news={newsEsquiu}/>
@@ -33,6 +47,8 @@ Index.getInitialProps = async ({req}) => {
     const responseEsquiu = await fetch(urlEsquiu)
     const newsEsquiu = await responseEsquiu.json()
 
+    
+
     const urlClarin = `https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.clarin.com%2Frss%2Flo-ultimo%2F&api_key=${apiKey}&count=5`
     const responseClarin = await fetch(urlClarin)
     const newsClarin = await responseClarin.json()
@@ -50,5 +66,6 @@ Index.getInitialProps = async ({req}) => {
         newsClarin: newsClarin,
         newsCatActual: newsCatActual,
         newsNacion: newsNacion,
+        loading: false
     }
 }
