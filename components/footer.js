@@ -14,14 +14,14 @@ export default class Footer extends Component {
           <Row>
             <Col sm={{ size: 'auto', offset: 3 }} md={{ size: 'auto', offset: 3 }} className="mb-1 mt-5 text-white">
               <div className="mb-5 flex-center">
-                <h3 class="text-white" href="https://www.facebook.com/nextinnovationlab/"> 
+                <h3 className="text-white" href="https://www.facebook.com/nextinnovationlab/"> 
                   Next Innovation Lab <img src="/static/logo-next.png" width="5%"/></h3>
                   
               </div>
             </Col>
           </Row>
 
-          <div class="footer-copyright pb-3 text-center text-white">
+          <div className="footer-copyright pb-3 text-center text-white">
               © 2018 Copyright
           </div>
         </Container>
