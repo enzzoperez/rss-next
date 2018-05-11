@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Row, Col } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import fetch from 'isomorphic-unfetch'
 import withRedux from "next-redux-wrapper";
@@ -34,6 +34,13 @@ export default class Index extends Component {
                 <NewsClarin news={newsClarin}/>
                 <NewsCatActual news={newsCatActual} />
                 <NewsNacion news={newsNacion}/>
+                <style jsx global>{`
+                    body { 
+                    margin: 0;
+                    background-color: #fafafa;
+                    font-family: Nilland;
+                    }
+                `}</style>
             </Layout>
         )
     }

@@ -9,26 +9,25 @@ import { Container, Row, Col } from 'reactstrap';
 export default class Footer extends Component {
   render() {
     return (
-      <footer className="page-footer font-small indigo pt-0">
+      <footer className="page-footer fixed-bottom font-small indigo">
         <Container>
           <Row>
-            <Col sm={{ size: 'auto', offset: 3 }} md={{ size: 'auto', offset: 3 }} className="mb-1 mt-5 text-white">
+            <Col sm={{ size: 'auto', offset: 4 }} md={{ size: 'auto', offset: 4 }} className="mb-1 mt-3 text-white">
               <div className="mb-5 flex-center">
-                <h3 className="text-white" href="https://www.facebook.com/nextinnovationlab/"> 
-                  Next Innovation Lab <img src="/static/logo-next.png" width="5%"/></h3>
-                  
+                <h5 className="text-white" href="https://www.facebook.com/nextinnovationlab/"> 
+                  Next Innovation Lab  
+                  <img src="/static/logo-next.png" width="5%"/>
+                  © 2018 Copyright
+                </h5>
               </div>
             </Col>
           </Row>
-
-          <div className="footer-copyright pb-3 text-center text-white">
-              © 2018 Copyright
-          </div>
         </Container>
         <style jsx>{`
           .indigo { 
             background: #30302f;
             font-family: Roboto;
+            height: 60px;
           }
         `}</style>
     </footer>

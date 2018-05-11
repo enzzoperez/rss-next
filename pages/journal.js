@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ListGroup, ListGroupItem } from 'reactstrap';
+import { Row, Col, ListGroup, ListGroupItem } from 'reactstrap';
 
 import Link from "next/link";
 import Layout from "../components/layout";
@@ -42,7 +42,12 @@ export default class Journal extends Component {
         
         return (
             <Layout>
-                <Categories daily={name}/>
+                <Row>
+                    <Col lg="2"></Col>
+                    <Col lg="8">
+                        <Categories daily={name}/>
+                    </Col>
+                </Row>
             </Layout>
         )
     }
