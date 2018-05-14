@@ -18,6 +18,16 @@ export default class Index extends Component {
     componentDidMount(){
         let {loading} = this.props
         this.setState({loading: loading})
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+              .register('/sw.js')
+              .then(registration => {
+                console.log('service worker registration successful')
+              })
+              .catch(err => {
+                console.warn('service worker registration failed', err.message)
+              })
+      }
     }
 
     render() {

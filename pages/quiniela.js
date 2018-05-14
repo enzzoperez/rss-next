@@ -16,8 +16,10 @@ class Iframe extends Component {
   }
 
   componentDidMount () {
-    let iframe = ReactDOM.findDOMNode(this.refs.iframe)
-    iframe.addEventListener('load', this.props.onLoad);
+    var iframe = document.getElementById("iframe");
+    var elmnt = iframe.contentWindow.document.getElementsByTagName("SorteoForm")[0];
+    console.log('ifrs', elmnt);
+    
   }
 
   render () {
@@ -31,6 +33,7 @@ class Iframe extends Component {
     return (
       <iframe
         ref="iframe"
+        id='iframe'
         {...this.props}
         frameBorder={'0'}
         width={'100%'}
