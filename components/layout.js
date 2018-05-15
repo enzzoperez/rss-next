@@ -5,6 +5,8 @@ import Example from "./navbar";
 import Footer from "./footer";
 import Header from "./header";
 import { Container } from 'reactstrap'
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-119234292-1');
 
 
 export default class Layout extends Component {
@@ -26,6 +28,7 @@ export default class Layout extends Component {
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="mobile-web-app-capable" content="yes" />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119234292-1"></script>
         </Head>
 
       <div>
