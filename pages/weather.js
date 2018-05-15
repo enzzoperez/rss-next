@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Card, CardTitle, CardText, CardImg, CardImgOverlay, CardDeck,
+        CardSubtitle, CardBody,  Row, Col, ListGroup, ListGroupItem, CardColumns } from 'reactstrap';
 import fetch from "isomorphic-unfetch";
 import Layout from '../components/layout';
 import { convertToC } from "../utils/utils";
@@ -11,13 +13,20 @@ const WeatherList = (props) => {
             let day = d.toLocaleDateString()
             const time = d.toLocaleTimeString()
             return (
-                <div>
-                    <p>Dia: {day}</p>
-                    <p>Hora: {time}</p>
-                    <p>Maxima: {item.main.temp_max}</p>
-                    <p>Mínima: {item.main.temp_min}</p>
-                    <hr></hr>
-                </div>
+                <Card>
+                    <CardBody>
+                        <CardTitle>
+                            Dia: {day}
+                        </CardTitle>
+                        <CardSubtitle>
+                            <p>Hora: {time} hs</p>
+                        </CardSubtitle>
+                        <CardText>
+                            <p>Maxima: {item.main.temp_max} ºC</p>
+                            <p>Mínima: {item.main.temp_min} ºC</p>
+                        </CardText>
+                    </CardBody>
+                </Card>
             )
         })
     )
@@ -28,11 +37,44 @@ export default class Weather extends Component {
         const {currentWeather, listWeather} = this.props
         return (
             <Layout>
-                <div>
-                    Temperatura actual: <b>{currentWeather}</b>
-                    <hr></hr>
-                </div>
-                <WeatherList currentWeather={currentWeather} list={listWeather}/>
+                <Row class="mx-auto mt-5">
+                    <Col lg={{ size: 10, order: 2, offset: 1 }} xl={{ size: 10, order: 2, offset: 1 }}>
+                        <Card inverse>
+                            <CardImg width="100%" src="static/weather-background.jpg" width="30%"/><CardImgOverlay>
+                            <Row>
+                                <Col lg={{ size: 3, order: 2, offset: 5 }} xl={{ size: 3, order: 2, offset: 5 }}>
+                                    <CardTitle class="mx-auto tituloclima">Temperatura actual</CardTitle>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col lg={{ size: 6, order: 2, offset: 4 }} xl={{ size: 4, order: 2, offset: 4 }}>
+                                    <CardText>
+                                        <p className="tituloclima">
+                                            {currentWeather} ºC
+                                        </p>
+                                    </CardText>
+                                </Col>
+                            </Row>
+                            </CardImgOverlay>
+                        </Card>
+                        <hr></hr>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col lg={{ size: 10, order: 2, offset: 1 }} xl={{ size: 10, order: 2, offset: 1 }}  >
+                        <CardColumns>
+                            <WeatherList currentWeather={currentWeather} list={listWeather}/>
+                        </CardColumns>
+                    </Col>
+                </Row>
+                <style jsx>{`
+                    .tituloclima {
+                        font-size: 90px; 
+                    }
+                    .card {
+                        background-color: blue,
+                    }
+                `}</style>
             </Layout>
         )
     }
