@@ -16,7 +16,7 @@ const JournalComponent = (props) => {
 		<Card>
 			<CardBody>
 				<CardTitle>
-					<Link href={`${url}/?name=${name}`} width="50%">
+					<Link href={`${url}?name=${name}`} width="50%">
 						<a>{name}</a>
 					</Link>
 				</CardTitle>
