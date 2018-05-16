@@ -15,12 +15,10 @@ export default class Layout extends Component {
     return (
       <div>
         <Head>
-          <title>{ title? title: '' }</title>
-          <meta name="description" content={ description? description: ''} />
+          <meta name="description" content={ description? description: 'PWA de Noticias catamarqueñas. A Simple PWA of News from Catamarca'} />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+          <title>Next News</title>
           <link rel="manifest" href="/static/manifest.webmanifest" />
-
           <meta name="theme-color" content="#cc7c28" />
           <link rel="shortcut icon" href="/static/logo-next.png" />
           <link rel="apple-touch-icon" href="static/logo-next.png" />

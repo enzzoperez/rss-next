@@ -8,7 +8,7 @@
   "description": "Una PWA simple de noticias catamarqueñas.",
   "icons": [{
     "src": "/static/logo-next.png",
-    "sizes": "533×400",
+    "sizes": "192x192",
     "type": "image/png"
   }]
 }

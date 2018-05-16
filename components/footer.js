@@ -9,12 +9,12 @@ import { Container, Row, Col } from 'reactstrap';
 export default class Footer extends Component {
   render() {
     return (
-      <footer className="page-footer fixed-bottom font-small indigo">
+      <footer className="page-footer font-small indigo">
         <Container>
           <Row>
-            <Col sm={{ size: 'auto', offset: 4 }} md={{ size: 'auto', offset: 4 }} className="mb-1 mt-3 text-white">
-              <div className="mb-5 flex-center">
-                <h5 className="text-white" href="https://www.facebook.com/nextinnovationlab/"> 
+            <Col xs={{ size: 'auto', offset: 4 }} sm={{ size: 'auto', offset: 4 }} md={{ size: 'auto', offset: 4 }} className="text-white">
+              <div className="ml-4 flex-center">
+                <h5 className="text-white ml-4" href="https://www.facebook.com/nextinnovationlab/"> 
                   Next Innovation Lab  
                   <img src="/static/logo-next.png" width="5%"/>
                   © 2018 Copyright
