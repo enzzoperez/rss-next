@@ -69,7 +69,7 @@ export default class Weather extends Component {
                 </Row>
                 <style jsx>{`
                     .tituloclima {
-                        font-size: 90px; 
+                        font-size: 4em; 
                     }
                     .card {
                         background-color: blue,
