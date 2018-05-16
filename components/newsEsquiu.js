@@ -18,7 +18,7 @@ export default class NewsEsquiu extends Component {
                         <Col lg="3" xl="3"></Col>
                         <Col lg="6" xl="6">
                             <Card className="itemNews mb-3" href={link}>
-                                <CardImg style={{ width: "100%" }} src={thumbnail}/>
+                                <CardImg  style={{ width: "100%" }} src="static/img-default-elesquiu.png"/>
                                 <CardBody>
                                     <Badge className="mb-3" color="warning">
                                         El Esquiu
@@ -76,8 +76,9 @@ export default class NewsEsquiu extends Component {
                             }
                         `}</style>
                     </Row>
-                )
+                )  
             })
         )
+        
     }
 };

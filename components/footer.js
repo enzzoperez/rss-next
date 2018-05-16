@@ -12,9 +12,9 @@ export default class Footer extends Component {
       <footer className="page-footer font-small indigo">
         <Container>
           <Row>
-            <Col xs={{ size: 'auto', offset: 4 }} sm={{ size: 'auto', offset: 4 }} md={{ size: 'auto', offset: 4 }} className="text-white">
-              <div className="ml-4 flex-center">
-                <h5 className="text-white ml-4" href="https://www.facebook.com/nextinnovationlab/"> 
+            <Col xs="12" sm="12" md="12" className="text-white">
+              <div className="flex-center">
+                <h5 className="text-white ml-1" href="https://www.facebook.com/nextinnovationlab/"> 
                   Next Innovation Lab  
                   <img src="/static/logo-next.png" width="5%"/>
                   © 2018 Copyright

@@ -27,6 +27,14 @@ export default class Layout extends Component {
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="mobile-web-app-capable" content="yes" />
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119234292-1"></script>
+          <script dangerouslySetInnerHTML={{__html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments)}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-119234292-1');
+          `}} />
+
         </Head>
 
       <div>
