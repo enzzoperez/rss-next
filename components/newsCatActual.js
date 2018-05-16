@@ -18,7 +18,7 @@ export default class NewsCatActual extends Component {
                         <Col lg="3" xl="3"></Col>
                         <Col lg="6" xl="6">
                             <Card className="itemNews mb-3" href={link}>
-                                <CardImg width="10%" src={thumbnail}/>
+                                <CardImg onError={this.addDefaultSrc} width="10%" src={thumbnail}/>
                                 <CardBody>
                                     <Badge className="mb-3" color="info">Catamarca Actual</Badge>
                                     <CardTitle><h2><a href={ link }>{ title }</a></h2></CardTitle>
@@ -63,5 +63,8 @@ export default class NewsCatActual extends Component {
                 )}
             )
         )
+    }
+    addDefaultSrc(ev){
+        ev.target.src = 'static/img-default-catamarcaactual.png'
     }
 };
