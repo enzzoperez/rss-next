@@ -15,8 +15,7 @@ const Categories = (props) => {
                 <ListGroup key={index}>
                     <ListGroupItem>
                         <Link 
-                            href={`/category?name=${cat.link}`}
-                            as={`/category/${cat.name}`}>
+                            href={`/category?link=${cat.link}`}>
                             <a>{cat.name}</a>
                         </Link>
                     </ListGroupItem>
