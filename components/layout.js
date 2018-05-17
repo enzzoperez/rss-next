@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Example from "./navbar";
 import Footer from "./footer";
-import Header from "./header";
 import { Container } from 'reactstrap'
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-119234292-1');
